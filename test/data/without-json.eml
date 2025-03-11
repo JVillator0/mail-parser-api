@@ -1,0 +1,19 @@
+MIME-Version: 1.0
+Date: Tue, 11 Mar 2025 12:31:12 -0600
+Message-ID: <CABtPNsykgokP5dZBTC6GD=hx5gMJeBZTvWVWD9P+ChQL22pZoQ@mail.gmail.com>
+Subject: Technical Test for Nest JS - Email without JSON files
+From: Javier Villatoro <javier99.villatoro@gmail.com>
+To: Javier Villatoro <Javier99.villatoro@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000015b5920630154be1"
+
+--00000000000015b5920630154be1
+Content-Type: text/plain; charset="UTF-8"
+
+Body of email
+
+--00000000000015b5920630154be1
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Body of email</div>
+
+--00000000000015b5920630154be1--
