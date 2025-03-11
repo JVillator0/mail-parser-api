@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { BadRequestException, Injectable, Logger } from '@nestjs/common';
 import axios from 'axios';
 import * as fs from 'fs';
 import { simpleParser } from 'mailparser';
@@ -21,7 +21,8 @@ export class EmailParserService {
       } else {
         this.logger.log(`Reading email from local path: ${emailPath}`);
         if (!fs.existsSync(emailPath)) {
-          throw new Error(`File not found: ${emailPath}`);
+          this.logger.error(`File not found: ${emailPath}`);
+          throw new BadRequestException('File not found.');
         }
         emailContent = fs.readFileSync(emailPath, 'utf-8');
       }
@@ -39,17 +40,20 @@ export class EmailParserService {
 
       const body = parsed.text || parsed.html;
       if (!body || typeof body !== 'string') {
-        throw new Error('Email body is empty or not a string.');
+        this.logger.error('Email body is empty or not a string.');
+        throw new BadRequestException('Email body is empty or not a string.');
       }
 
       return await this.extractJsonFromLinks(body);
     } catch (error) {
       if (error instanceof Error) {
         this.logger.error(`Error parsing email: ${error.message}`);
-        throw new Error(`Error parsing email: ${error.message}`);
+        throw new BadRequestException(
+          `Could not parse email: ${error.message}`,
+        );
       }
       this.logger.error('Unknown error while parsing email.');
-      throw new Error('Unknown error while parsing email.');
+      throw new BadRequestException('Could not parse email.');
     }
   }
 
