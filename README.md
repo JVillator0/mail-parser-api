@@ -121,7 +121,9 @@ npm run lint
 **Example request:**
 
 ```sh
-curl -X POST http://localhost:3000/email-parser/parse      -H "Content-Type: application/json"      -d '{"emailPath": "https://example.com/email.eml"}'
+curl -X POST http://localhost:3000/email-parser/parse \
+  -H "Content-Type: application/json" \
+  -d '{"emailPath": "https://example.com/email.eml"}'
 ```
 
 ## 🎯 **Continuous Integration (CI/CD)**
