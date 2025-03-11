@@ -1,0 +1,27 @@
+MIME-Version: 1.0
+Date: Tue, 11 Mar 2025 12:23:03 -0600
+Message-ID: <CABtPNsxR2fvxDR3GkwFbE7wE6srgnQfP6GCiv4tKesGKm9KZOw@mail.gmail.com>
+Subject: Technical Test for Nest JS - Email with json as a link in the body
+From: Javier Villatoro <javier99.villatoro@gmail.com>
+To: Javier Villatoro <Javier99.villatoro@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000ee29fc0630152d1a"
+
+--000000000000ee29fc0630152d1a
+Content-Type: text/plain; charset="UTF-8"
+
+Body of email
+
+URL of json:
+https://raw.githubusercontent.com/JVillator0/mail-parser-api/refs/heads/main/test/data/dummy-clients.json
+
+--000000000000ee29fc0630152d1a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Body of email<div><br></div><div>URL of json:=C2=A0<a href=
+=3D"https://raw.githubusercontent.com/JVillator0/mail-parser-api/refs/heads=
+/main/test/data/dummy-clients.json">https://raw.githubusercontent.com/JVill=
+ator0/mail-parser-api/refs/heads/main/test/data/dummy-clients.json</a></div=
+></div>
+
+--000000000000ee29fc0630152d1a--

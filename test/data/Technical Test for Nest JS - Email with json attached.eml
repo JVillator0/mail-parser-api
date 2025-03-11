@@ -1,0 +1,33 @@
+MIME-Version: 1.0
+Date: Tue, 11 Mar 2025 12:19:33 -0600
+Message-ID: <CABtPNsxX0nj8htBO3PriYxKFyFeyteizi7viHcrCwbJgtMxO4w@mail.gmail.com>
+Subject: Technical Test for Nest JS - Email with json attached
+From: Javier Villatoro <javier99.villatoro@gmail.com>
+To: Javier Villatoro <Javier99.villatoro@gmail.com>
+Content-Type: multipart/mixed; boundary="00000000000071faab06301521f4"
+
+--00000000000071faab06301521f4
+Content-Type: multipart/alternative; boundary="00000000000071faa906301521f2"
+
+--00000000000071faa906301521f2
+Content-Type: text/plain; charset="UTF-8"
+
+Body of email
+
+--00000000000071faa906301521f2
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Body of email</div>
+
+--00000000000071faa906301521f2--
+--00000000000071faab06301521f4
+Content-Type: application/json; name="dummy-clients.json"
+Content-Disposition: attachment; filename="dummy-clients.json"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_m84tfbf30
+Content-ID: <f_m84tfbf30>
+
+ewogICAgImNsaWVudHMiOiBbCiAgICAgICAgewogICAgICAgICAgICAibmFtZSI6ICJKb2huIERv
+ZSIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgIm5hbWUiOiAiSmFuZSBEb2UiCiAg
+ICAgICAgfQogICAgXQp9
+--00000000000071faab06301521f4--
