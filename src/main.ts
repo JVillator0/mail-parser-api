@@ -18,10 +18,21 @@ async function bootstrap() {
       'API para analizar correos electrónicos y extraer JSON adjuntos o en enlaces',
     )
     .setVersion('1.0')
-    .addTag('email-parser')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
+
+  document.tags = [
+    {
+      name: 'Status',
+      description: 'Check the status of the API',
+    },
+    {
+      name: 'Email Parser',
+      description: 'Extract JSON from emails',
+    },
+  ];
+
   SwaggerModule.setup('api/docs', app, document);
 
   await app.listen(process.env.PORT ?? 3000, '0.0.0.0');

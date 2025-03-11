@@ -3,7 +3,7 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { ParseEmailDto } from '../dto/parse-email.dto';
 import { EmailParserService } from '../services/email-parser.service';
 
-@ApiTags('email-parser')
+@ApiTags('Email Parser')
 @Controller('email-parser')
 export class EmailParserController {
   constructor(private readonly emailParserService: EmailParserService) {}
